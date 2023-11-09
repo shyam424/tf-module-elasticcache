@@ -54,6 +54,7 @@ resource "aws_elasticache_cluster" "main" {
 }
 
 
+#No need to create the instance for elasticcahse as we are generating one node
 #5-instance should be created in the RDS cluster which was created above
 #resource "aws_rds_cluster_instance" "main" {
 #  count              = var.instance_count
