@@ -55,11 +55,11 @@ resource "aws_elasticache_cluster" "main" {
 
 
 #5-instance should be created in the RDS cluster which was created above
-resource "aws_rds_cluster_instance" "cluster_instances" {
-  count              = var.instance_count
-  identifier         = "${local.name_prefix}-cluster-${count.index+1}"
-  cluster_identifier = aws_rds_cluster.main.id
-  instance_class     = var.instance_class
-  engine             = aws_rds_cluster.main.engine
-  engine_version     = aws_rds_cluster.main.engine_version
-}
+#resource "aws_rds_cluster_instance" "main" {
+#  count              = var.instance_count
+#  identifier         = "${local.name_prefix}-cluster-${count.index+1}"
+#  cluster_identifier = aws_rds_cluster.main.id
+#  instance_class     = var.instance_class
+#  engine             = aws_rds_cluster.main.engine
+#  engine_version     = aws_rds_cluster.main.engine_version
+#}
